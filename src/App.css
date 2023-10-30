@@ -1,38 +1,312 @@
-.App {
+/* Global styles */
+body {
+  margin: 0;
+  font-family: KellySlab, sans-serif;
+  background-color: #111; /* Dark background color */
+  color: #fff; /* Text color for light mode */
+}
+
+/* Header styles */
+header {
+  padding: 20px;
+  text-align: center;
+  font-family: KellySlab, sans-serif;
+}
+
+/* Footer styles */
+footer {
+  padding: 10px;
+  text-align: center;
+  background-color: #222; /* Footer background color in dark mode */
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  --color: rgba(114, 114, 114, 0.3);
+  background-color: #191a1a;
+  background-image: linear-gradient(0deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%, transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%, transparent),
+    linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%, transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%, transparent);
+  background-size: 55px 55px;
+}
+
+
+.navbar {
+  background-color: #000000;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  justify-content: space-between;
+  position: fixed; /* Make the navigation bar fixed */
+  top: 0; /* Stick it to the top of the page */
+  width: 100%; /* Full width */
+  z-index: 999;
+  left: 0; /* Ensure it's above other elements */
+}
+
+/* Rest of your CSS styles */
+
+
+.logo img {
+  height: 40px; /* Adjust the height as needed */
+  margin-left: 20px;
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+
+.navbar li {
+  margin-right: 20px;
+  font-size: 20px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+
+/* App.css */
+
+/* App.css */
+/* App.css */
+
+.mascots {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  height: 500px;
+}
+
+.mascot {
+  position: relative;
+  transition: transform 2s; /* Add a smooth transition effect */
+}
+
+.mascot:hover {
+  transform: scale(1.1); /* Increase the size when hovering */
+  margin-left: 10px;
+  margin-right:5px;
+}
+
+.mascot img {
+  max-width: 350px; /* Adjust the size as needed */
+}
+
+.mascots h2{
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.explanation {
+  text-align: center;
+  margin-top: 10px;
+  display: none; /* Initially hide the explanations */
+  
+  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.mascot:hover .explanation {
+  display: block; /* Show the explanation on hover */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.event-posters {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 20px;
+}
+
+.poster {
+  width: calc(33% - 20px); /* 30% width with a 20px gap between posters */
+  border: 2px solid #616161;
+  max-width: 100%;
+  height: auto;
+  cursor: pointer;
+  margin-bottom: 10px;
+  background-color: #000;
+
+}
+
+.poster img {
+  max-width: 100%; /* Ensure the posters fit within their frames */
+  display: block;
+}
+
+.poster h3{
+  text-align: center;
+}
+
+/* Add this CSS to your App.css file */
+
+.event-details-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  z-index: 999;
+  overflow-y: auto; /* Add scroll property to enable scrolling */
 }
 
-.App-link {
-  color: #61dafb;
+/* Add this CSS to your App.css file */
+
+.event-details {
+  background: #000;
+  padding: 20px;
+  max-width: 40%;
+  text-align: center;
+  display: flex;
+  flex-direction: column; /* Arrange elements vertically */
+  align-items: center; /* Center elements horizontally */
+  border: 3px solid #616161; /* Add a border for the frame effect */
+  border-radius: 10px; /* Add rounded corners for the frame */
+  overflow-y: auto; /* Add scroll property to enable scrolling within the container */
+  max-height: 90%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+.event-poster {
+  max-width: 100%; /* Adjust the percentage as needed to control the size */
+  height: auto; /* Maintain the aspect ratio */
+  margin-bottom: 10px; /* Add spacing between the poster and title */
+}
+
+h2 {
+  margin: 10px 0; /* Adjust spacing around the title */
+}
+
+p {
+  margin: 10px 0; /* Adjust spacing around the description */
+}
+
+button {
+  background: #ff5722;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 10px; /* Add spacing above the "Close" button */
+}
+
+::-webkit-scrollbar {
+  width: 12px; /* Adjust the width as needed */
+}
+
+/* Customize the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background-color: #6e6e6e; /* Scrollbar thumb color */
+  border-radius: 10px; /* Rounded corners for the thumb */
+}
+
+/* Customize the scrollbar track on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #6e6e6ebc; /* Change color on hover */
+}
+
+/* Customize the scrollbar track background */
+::-webkit-scrollbar-track {
+  background-color: #fff; /* Scrollbar track background color */
+  border-radius: 10px; /* Rounded corners for the track */
+}
+
+.poster-container {
+  display: flex;
+  /* Other styles for the Poster container */
+}
+
+/* Add this CSS to your App.css file */
+
+/* Styles for screens with a maximum width of 768px (typical for mobile phones) */
+@media (max-width: 768px) {
+  .mascots {
+    flex-direction: column; /* Stack mascots vertically */
+    align-items: center; /* Center mascots horizontally */
+    height: auto; /* Remove fixed height to allow content to adjust */
   }
-  to {
-    transform: rotate(360deg);
+
+  .mascot {
+    margin: 10px 0; /* Add spacing between mascots */
   }
+
+  .mascot:hover {
+    transform: none; /* Remove hover effect on mobile */
+  }
+
+  .explanation {
+    display: block; /* Always show explanations on mobile */
+  }
+
+  
+
+  
+}
+
+.mascot-introduction {
+  text-align: center;
+  padding: 20px;
+}
+
+.mascot-introduction h2 {
+  margin: 0;
+  font-size: 40px;
+  color: #fff;
+}
+
+.mascot-introduction p {
+  font-size: 30px;
+  color: #ccc;
+}
+
+header h1{
+  font-size: 60px;
+}
+
+.events-intro {
+  text-align: center;
+  padding: 20px;
+}
+
+.events-intro h2 {
+  margin: 0;
+  font-size: 40px;
+  color: #fff;
+}
+
+.events-intro p {
+  font-size: 30px;
+  color: #ccc;
+}
+
+@font-face {
+  font-family: 'KellySlab';
+  src: url('./assets/fonts/KellySlab-Regular.ttf') format('truetype');
+}
+
+.body-no-scroll {
+  overflow: hidden;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 50px;
+  line-height: 1;
+  cursor: pointer;
+  color: #fff;
+}
+
+.close-button:hover {
+  color: #ff5722; /* Change color on hover (you can customize this) */
 }
