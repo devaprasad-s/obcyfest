@@ -25,11 +25,32 @@ footer {
   height: 100%;
   --color: rgba(114, 114, 114, 0.3);
   background-color: #191a1a;
-  background-image: linear-gradient(0deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%, transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%, transparent),
-    linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%, transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%, transparent);
+  background-image: linear-gradient(
+      0deg,
+      transparent 24%,
+      var(--color) 25%,
+      var(--color) 26%,
+      transparent 27%,
+      transparent 74%,
+      var(--color) 75%,
+      var(--color) 76%,
+      transparent 77%,
+      transparent
+    ),
+    linear-gradient(
+      90deg,
+      transparent 24%,
+      var(--color) 25%,
+      var(--color) 26%,
+      transparent 27%,
+      transparent 74%,
+      var(--color) 75%,
+      var(--color) 76%,
+      transparent 77%,
+      transparent
+    );
   background-size: 55px 55px;
 }
-
 
 .navbar {
   background-color: #000000;
@@ -45,7 +66,6 @@ footer {
 }
 
 /* Rest of your CSS styles */
-
 
 .logo img {
   height: 40px; /* Adjust the height as needed */
@@ -69,7 +89,6 @@ footer {
   font-weight: bold;
 }
 
-
 /* App.css */
 
 /* App.css */
@@ -90,14 +109,14 @@ footer {
 .mascot:hover {
   transform: scale(1.1); /* Increase the size when hovering */
   margin-left: 10px;
-  margin-right:5px;
+  margin-right: 5px;
 }
 
 .mascot img {
   max-width: 350px; /* Adjust the size as needed */
 }
 
-.mascots h2{
+.mascots h2 {
   text-align: center;
 }
 
@@ -105,8 +124,6 @@ footer {
   text-align: center;
   margin-top: 10px;
   display: none; /* Initially hide the explanations */
-  
-  
 }
 
 .mascot:hover .explanation {
@@ -129,7 +146,6 @@ footer {
   cursor: pointer;
   margin-bottom: 10px;
   background-color: #000;
-
 }
 
 .poster img {
@@ -137,7 +153,7 @@ footer {
   display: block;
 }
 
-.poster h3{
+.poster h3 {
   text-align: center;
 }
 
@@ -172,7 +188,6 @@ footer {
   overflow-y: auto; /* Add scroll property to enable scrolling within the container */
   max-height: 90%;
 }
-
 
 .event-poster {
   max-width: 100%; /* Adjust the percentage as needed to control the size */
@@ -244,10 +259,6 @@ button {
   .explanation {
     display: block; /* Always show explanations on mobile */
   }
-
-  
-
-  
 }
 
 .mascot-introduction {
@@ -266,7 +277,7 @@ button {
   color: #ccc;
 }
 
-header h1{
+header h1 {
   font-size: 60px;
 }
 
@@ -287,8 +298,8 @@ header h1{
 }
 
 @font-face {
-  font-family: 'KellySlab';
-  src: url('./assets/fonts/KellySlab-Regular.ttf') format('truetype');
+  font-family: "KellySlab";
+  src: url("./assets/fonts/KellySlab-Regular.ttf") format("truetype");
 }
 
 .body-no-scroll {
@@ -309,4 +320,176 @@ header h1{
 
 .close-button:hover {
   color: #ff5722; /* Change color on hover (you can customize this) */
+}
+
+.registration-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  overflow-y: auto;
+}
+
+.registration-form {
+  background: #000;
+  padding: 20px;
+  max-width: 40%;
+  text-align: center;
+  display: flex;
+  flex-direction: column; /* Arrange elements vertically */
+  align-items: center; /* Center elements horizontally */
+  border: 3px solid #616161; /* Add a border for the frame effect */
+  border-radius: 10px; /* Add rounded corners for the frame */
+  overflow-y: auto; /* Add scroll property to enable scrolling within the container */
+  max-height: 90%;
+}
+
+.registration-form p{
+  text-align: left;
+  font-size: 15px;
+  margin: 5%;
+  
+}
+.form__group {
+  position: relative;
+  padding: 20px 0 0;
+  width: 100%;
+  max-width: 500px;
+}
+
+.form__field {
+  font-family: inherit;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #9b9b9b;
+  outline: 0;
+  font-size: 17px;
+  color: #fff;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+
+.form__field::placeholder {
+  color: transparent;
+}
+
+.form__field:placeholder-shown ~ .form__label {
+  font-size: 17px;
+  cursor: text;
+  top: 20px;
+}
+
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 17px;
+  color: #9b9b9b;
+  pointer-events: none;
+}
+
+.form__field:focus {
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  border-image: linear-gradient(to right, #116399, #38caef);
+  border-image-slice: 1;
+}
+
+.form__field:focus ~ .form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 17px;
+  color: #38caef;
+  font-weight: 700;
+}
+
+/* reset input */
+.form__field:required,
+.form__field:invalid {
+  box-shadow: none;
+}
+
+button {
+  position: relative;
+  padding: 10px 20px;
+  border-radius: 7px;
+  border: 1px solid #116399;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-family: KellySlab;
+  font-weight: 600;
+  letter-spacing: 2px;
+  background: transparent;
+  color: #fff;
+  overflow: hidden;
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+button:hover {
+  background: #38caef;
+  box-shadow: 0 0 30px 5px #38caefcb;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+button:hover::before {
+  -webkit-animation: sh02 0.5s 0s linear;
+  -moz-animation: sh02 0.5s 0s linear;
+  animation: sh02 0.5s 0s linear;
+}
+
+button::before {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 86%;
+  position: absolute;
+  top: 7%;
+  left: 0%;
+  opacity: 0;
+  background: #fff;
+  box-shadow: 0 0 50px 30px #fff;
+  -webkit-transform: skewX(-20deg);
+  -moz-transform: skewX(-20deg);
+  -ms-transform: skewX(-20deg);
+  -o-transform: skewX(-20deg);
+  transform: skewX(-20deg);
+}
+
+@keyframes sh02 {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+}
+
+button:active {
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: box-shadow 0.2s ease-in;
+  -moz-transition: box-shadow 0.2s ease-in;
+  transition: box-shadow 0.2s ease-in;
 }

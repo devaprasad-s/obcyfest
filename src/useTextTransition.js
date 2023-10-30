@@ -1,4 +1,4 @@
-import  { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
 const useTextTransition = (initialText, finalText, duration) => {
   const [text, setText] = useState(initialText);
@@ -22,18 +22,18 @@ const useTextTransition = (initialText, finalText, duration) => {
     };
 
     const encryptText = (start, end, t) => {
-     
       return start
-        .split('')
+        .split("")
         .map((char, index) => {
           const startCharCode = char.charCodeAt(0);
-          const endCharCode = index < end.length ? end[index].charCodeAt(0) : 32; // 32 is the character code for space
+          const endCharCode =
+            index < end.length ? end[index].charCodeAt(0) : 32; // 32 is the character code for space
           const interpolatedCharCode = Math.round(
-            startCharCode + (endCharCode - startCharCode) * t
+            startCharCode + (endCharCode - startCharCode) * t,
           );
           return String.fromCharCode(interpolatedCharCode);
         })
-        .join('');
+        .join("");
     };
 
     requestId = requestAnimationFrame(animate);
