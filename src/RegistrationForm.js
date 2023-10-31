@@ -81,23 +81,7 @@ function RegistrationForm({ onClose }) {
             Team Name
           </label>
         </div>
-        <br></br>
-        
-        
-        <div class="form__group field">
-          <input
-            type="input"
-            class="form__field"
-            placeholder="Team Code"
-            required=""
-          />
-          <label for="teamcode" class="form__label">
-            Team Code 
-          </label>
-        </div>
-        <p>
-        Team Code Format:S+Your Sem+R+Team Leader's Class Roll No in 2 digits. Eg: S7R01
-        </p>
+      
         <br></br>
         <button onClick={handleRegistrationSubmit}>Submit</button>
       </div>
