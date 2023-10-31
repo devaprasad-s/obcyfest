@@ -69,18 +69,6 @@ function RegistrationForm({ onClose }) {
             Phone
           </label>
         </div>
-        <br></br>
-        <div class="form__group field">
-          <input
-            type="input"
-            class="form__field"
-            placeholder="Team Name"
-            required=""
-          />
-          <label for="team" class="form__label">
-            Team Name
-          </label>
-        </div>
       
         <br></br>
         <button onClick={handleRegistrationSubmit}>Submit</button>
