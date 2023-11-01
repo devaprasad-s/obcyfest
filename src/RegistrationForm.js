@@ -70,71 +70,8 @@ function RegistrationForm({ onClose }) {
         <h2>Registration Form</h2>
         <br></br>
         {/* Example form fields */}
-        <div class="form__group field">
-          <input
-            type="input"
-            class="form__field"
-            placeholder="Name"
-            required=""
-            onChange={(e) => {
-              setUsername(e.target.value);
-            }}
-            value={username}
-          />
-          <label for="name" class="form__label">
-            Name
-          </label>
-        </div>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeJm6BDvYxb5_JU4_Cjh7lPlHwJ9BqxjZW69VaSYpKo0cRZYw/viewform?embedded=true" width="100%" height="1535" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
         <br></br>
-        <div class="form__group field">
-          <input
-            type="input"
-            class="form__field"
-            placeholder="Semester"
-            required=""
-            onChange={(e) => {
-              setSem(e.target.value);
-            }}
-            value={sem}
-          />
-          <label for="semester" class="form__label">
-            Semester (1,3,5 or 7)
-          </label>
-        </div>
-        <br></br>
-        <div class="form__group field">
-          <input
-            type="input"
-            class="form__field"
-            placeholder="Email"
-            required
-            onChange={(e) => {
-              setEmail(e.target.value);
-            }}
-            value={email}
-          />
-          <label for="email" class="form__label">
-            Email
-          </label>
-        </div>
-        <br></br>
-        <div class="form__group field">
-          <input
-            type="input"
-            class="form__field"
-            placeholder="Phone"
-            required
-            onChange={(e) => {
-              setMobileNo(e.target.value);
-            }}
-            value={mobileNo}
-          />
-          <label for="phone" class="form__label">
-            Phone
-          </label>
-        </div>
-        <br></br>
-        <button onClick={handleSubmit}>Submit</button>
       </div>
     </div>
   );

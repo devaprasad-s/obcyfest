@@ -259,6 +259,38 @@ button {
   .explanation {
     display: block; /* Always show explanations on mobile */
   }
+  .event-posters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 20px;
+  }
+  .poster {
+    width:100%; /* 30% width with a 20px gap between posters */
+    border: 2px solid #616161;
+    max-width: 100%;
+    height: auto;
+    cursor: pointer;
+    margin-bottom: 10px;
+    background-color: #000;
+  }
+  .event-details {
+  background: #000;
+  padding: 20px;
+  max-width: 90%;
+  text-align: center;
+  display: flex;
+  flex-direction: column; /* Arrange elements vertically */
+  align-items: center; /* Center elements horizontally */
+  border: 3px solid #616161; /* Add a border for the frame effect */
+  border-radius: 10px; /* Add rounded corners for the frame */
+  overflow-y: auto; /* Add scroll property to enable scrolling within the container */
+  max-height: 90%;
+  }
+
+
+
 }
 
 .mascot-introduction {
@@ -339,7 +371,7 @@ header h1 {
 .registration-form {
   background: #000;
   padding: 20px;
-  width: 50%;
+  width: 80%;
 
   text-align: center;
   display: flex;
