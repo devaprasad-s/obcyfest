@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import axios from "axios";
+import Select from 'react-select'
 
 function getCurrentDate() {
   const currentDate = new Date();
@@ -29,6 +30,13 @@ function RegistrationForm({ onClose }) {
     }
   };
 
+  const options = [
+    { value: 'S7', label: 'S7' },
+    { value: 'S5', label: 'S5' },
+    { value: 'S3', label: 'S3' },
+    { value: 'S1', label: 'S1' }
+  ]
+
   function getCurrentDate() {
     const currentDate = new Date();
   
@@ -46,7 +54,6 @@ function RegistrationForm({ onClose }) {
       const response = await axios.post(
         "https://sheet.best/api/sheets/435458b8-386d-411c-9f56-28974c28908b",
         {
-
           Name: username,
           Email:email,
           Semester:sem,
@@ -60,6 +67,19 @@ function RegistrationForm({ onClose }) {
     }
   };
 
+  const customStyles = {
+    control: (provided) => ({
+      ...provided,
+      backgroundColor: 'black',
+      color:'white' // Set the background color of the control to black
+    }),
+    option: (provided, state) => ({
+      ...provided,
+      backgroundColor: 'black', // Set the background color of the options to black
+      color: 'white', // Set the text color to white
+    }),
+  };
+
   return (
     <div className="registration-overlay">
       <div className="registration-form">
@@ -70,8 +90,62 @@ function RegistrationForm({ onClose }) {
         <h2>Registration Form</h2>
         <br></br>
         {/* Example form fields */}
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeJm6BDvYxb5_JU4_Cjh7lPlHwJ9BqxjZW69VaSYpKo0cRZYw/viewform?embedded=true" width="100%" height="1535" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        <div class="form__group field">
+          <input
+            type="input"
+            class="form__field"
+            placeholder="Name"
+            required=""
+            onChange={(e) => {
+              setUsername(e.target.value);
+            }}
+            value={username}
+          />
+          <label for="name" class="form__label">
+            Name
+          </label>
+        </div>
         <br></br>
+        <div class="form__group field">
+        <Select options={options} className="select" styles={customStyles}/>
+        <label for="name" class="form__label">
+            Semester
+          </label>
+        </div>
+        <br></br>
+        <div class="form__group field">
+          <input
+            type="input"
+            class="form__field"
+            placeholder="Email"
+            required
+            onChange={(e) => {
+              setEmail(e.target.value);
+            }}
+            value={email}
+          />
+          <label for="email" class="form__label">
+            Email
+          </label>
+        </div>
+        <br></br>
+        <div class="form__group field">
+          <input
+            type="input"
+            class="form__field"
+            placeholder="Phone"
+            required
+            onChange={(e) => {
+              setMobileNo(e.target.value);
+            }}
+            value={mobileNo}
+          />
+          <label for="phone" class="form__label">
+            Phone
+          </label>
+        </div>
+        <br></br>
+        <button onClick={handleSubmit}>Submit</button>
       </div>
     </div>
   );
