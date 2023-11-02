@@ -6,9 +6,7 @@ body {
   color: #fff; /* Text color for light mode */
 }
 
-*{
-  overflow-x: hidden;
-}
+
 
 /* Header styles */
 header {
@@ -103,11 +101,12 @@ footer {
   justify-content: space-between;
   padding: 20px;
   height: 500px;
+  
 }
 
 .mascot {
   position: relative;
-  transition: transform 2s; /* Add a smooth transition effect */
+  transition: transform 5s; /* Add a smooth transition effect */
 }
 
 .mascot:hover {

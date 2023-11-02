@@ -89,7 +89,7 @@ function App() {
         <div className="mascot" data-aos="fade-right">
           <img src={Mascot1} alt="Mascot 1" />
           <h2>Raptorix</h2>
-          <p className="explanation">
+          <p className="explanation" >
             <p>
               I am Raptorix, the first year mascot. I love to fly high and hack
               into new domains. Learning and exploring are my passions. I am
@@ -139,15 +139,15 @@ function App() {
         </div>
       </section>
       <br></br>
-      <section id="events"></section>
+      <section id="events" data-aos="fade-up"></section>
       <br></br>
       <br></br>
       <br></br>
-      <section className="events-intro">
+      <section className="events-intro" data-aos="fade-up">
         <h2>Our Events</h2>
         <p>Take a look at our various events for this year's Obcyfest 2k23.</p>
       </section>
-      <section className="event-posters">
+      <section className="event-posters" data-aos="fade-up">
         {events.map((event, index) => (
           <div className="poster" key={index}>
             <img
