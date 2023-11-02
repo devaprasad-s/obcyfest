@@ -7,18 +7,23 @@ import Event2Poster from "./assets/images/Event2Poster.jpeg";
 import Event3Poster from "./assets/images/Event3Poster.jpeg";
 import Event4Poster from "./assets/images/Event4Poster.jpeg";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css"; // Import your CSS
 import useTextTransition from "./useTextTransition";
 import Navigation from "./components/Navigation"; // Import the Navigation component // Import the Mascots component
 import EventDetails from "./EventDetails";
+import Aos from "aos";
+import 'aos/dist/aos.css'
 
 function App() {
   const [showEventDetails, setShowEventDetails] = useState(false);
   const [selectedEvent, setSelectedEvent] = useState(null);
   const initialText = "08cyF357 e78f";
   const finalText = "ObCyFest 2023";
-  const duration = 5000; // Transition duration in milliseconds
+  const duration = 3000; // Transition duration in milliseconds
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, [])
 
   const text = useTextTransition(initialText, finalText, duration);
 
@@ -64,14 +69,14 @@ function App() {
 
   return (
     <div id="home" className="container">
-      <header>
+      <header >
         <Navigation /> {/* Include the Navigation component here */}
-        <section className="obcy-head">
+        <section className="obcy-head" data-aos="fade-up">
           <h1>{text}</h1>
         </section>
         {/* Add more content, event details, and sections as needed */}
       </header>
-      <section className="mascot-introduction">
+      <section className="mascot-introduction" data-aos="fade-up">
         <h2>Our Mascots</h2>
         <p>
           Meet our lovable mascots, each with a unique personality and
@@ -81,7 +86,7 @@ function App() {
         </p>
       </section>
       <section className="mascots">
-        <div className="mascot">
+        <div className="mascot" data-aos="fade-right">
           <img src={Mascot1} alt="Mascot 1" />
           <h2>Raptorix</h2>
           <p className="explanation">
@@ -94,7 +99,7 @@ function App() {
             </p>
           </p>
         </div>
-        <div className="mascot">
+        <div className="mascot" data-aos="fade-right">
           <img src={Mascot2} alt="Mascot 2" />
           <h2>Metalix</h2>
           <p className="explanation">
@@ -107,7 +112,7 @@ function App() {
             </p>
           </p>
         </div>
-        <div className="mascot">
+        <div className="mascot" data-aos="fade-left">
           <img src={Mascot3} alt="Mascot 3" />
           <h2>Blackspix</h2>
           <p className="explanation">
@@ -120,7 +125,7 @@ function App() {
             </p>
           </p>
         </div>
-        <div className="mascot">
+        <div className="mascot" data-aos="fade-left">
           <img src={Mascot4} alt="Mascot 4" />
           <h2>Wyrmix</h2>
           <p className="explanation">
@@ -163,7 +168,7 @@ function App() {
           poster={selectedEvent.poster} // Pass the poster image
         />
       )}
-      <footer>&copy; 2023 Obcydians CCET</footer>
+<footer>&copy; 2023 Obcydians CCET</footer>
     </div>
   );
 }
