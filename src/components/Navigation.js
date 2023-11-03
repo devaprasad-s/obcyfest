@@ -9,12 +9,15 @@ function scrollToEvents() {
 function Navigation() {
   return (
     <nav className="navbar">
-      <div className="logo">
-        <img src={logo} alt="Obcyfest Logo" />
+     
+        <div className="logo" >
+          <a href="#home"><img src={logo}  alt="Obcyfest Logo" /></a>
+        
       </div>
+    
       <ul>
         <li>
-          <a href="#home">Home</a>
+          
         </li>
         <li>
           <a href="#events" onClick={scrollToEvents}>

@@ -13,17 +13,29 @@ import useTextTransition from "./useTextTransition";
 import Navigation from "./components/Navigation"; // Import the Navigation component // Import the Mascots component
 import EventDetails from "./EventDetails";
 import Aos from "aos";
+import LoadingScreen from "./LoadingScreen";
 import 'aos/dist/aos.css'
 
 function App() {
   const [showEventDetails, setShowEventDetails] = useState(false);
   const [selectedEvent, setSelectedEvent] = useState(null);
+  const [contentLoaded, setContentLoaded] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const initialText = "08cyF357 e78f";
   const finalText = "ObCyFest 2023";
-  const duration = 3000; // Transition duration in milliseconds
+  const duration = 2000; // Transition duration in milliseconds
   useEffect(() => {
     Aos.init({ duration: 1000 });
   }, [])
+
+  useEffect(() => {
+    // Simulate content loading with a delay
+    setTimeout(() => {
+      setContentLoaded(true);
+    }, 3000); // Adjust the delay as needed
+  }, []);
+
+  
 
   const text = useTextTransition(initialText, finalText, duration);
 
@@ -69,6 +81,8 @@ function App() {
 
   return (
     <div id="home" className="container">
+      {contentLoaded ? ( // Render LoadingScreen or the content based on contentLoaded state
+        <>
       <header >
         <Navigation /> {/* Include the Navigation component here */}
         <section className="obcy-head" data-aos="fade-up">
@@ -143,6 +157,7 @@ function App() {
       <br></br>
       <br></br>
       <br></br>
+      
       <section className="events-intro" data-aos="fade-up">
         <h2>Our Events</h2>
         <p>Take a look at our various events for this year's Obcyfest 2k23.</p>
@@ -169,6 +184,10 @@ function App() {
         />
       )}
 <footer>&copy; 2023 Obcydians CCET</footer>
+</>
+) : (
+  <LoadingScreen />
+  )}
     </div>
   );
 }
