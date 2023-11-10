@@ -1,7 +1,7 @@
 // Navigation.js
 
 import React from "react";
-import logo from "../assets/images/gld obcydians.png"; // Import your logo image
+import logo from "../assets/images/gld obcydians.webp"; // Import your logo image
 
 function Navigation() {
   return (

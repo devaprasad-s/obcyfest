@@ -1,23 +1,23 @@
-import Mascot1 from "./assets/images/Mascot1.png";
-import Mascot2 from "./assets/images/Mascot2.png";
-import Mascot3 from "./assets/images/Mascot3.png";
-import Mascot4 from "./assets/images/Mascot4.png";
-import PatternPrintingPoster from "./assets/images/Event1poster.png";
-import BattleOfBrainsPoster from "./assets/images/Event2poster.png";
-import FindTheKeyPoster from "./assets/images/Event3poster.png";
-import TechnicalDebatePoster from "./assets/images/Event4poster.png";
-import FIFAPoster from "./assets/images/Event5poster.png";
-import FilmManiaPoster from "./assets/images/Event6poster.png";
-import BGMIPoster from "./assets/images/Event7poster.png";
-import SketchZonePoster from "./assets/images/Event8poster.png";
-import TypeChallengePoster from "./assets/images/Event9poster.png";
-import NFSPoster from "./assets/images/Event10poster.png";
-import Acumen2Poster from "./assets/images/Event11poster.png";
-import AIPalettePoster from "./assets/images/Event12poster.png";
-import TwistYourBrainPoster from "./assets/images/Event13poster.png";
-import HopOnPoster from "./assets/images/Event14poster.png";
-import PromptMasterPoster from "./assets/images/Event15poster.png";
-import logoimg from "./assets/images/logo.png";
+import Mascot1 from "./assets/images/Mascot1.webp";
+import Mascot2 from "./assets/images/Mascot2.webp";
+import Mascot3 from "./assets/images/Mascot3.webp";
+import Mascot4 from "./assets/images/Mascot4.webp";
+import PatternPrintingPoster from "./assets/images/Event1poster.webp";
+import BattleOfBrainsPoster from "./assets/images/Event2poster.webp";
+import FindTheKeyPoster from "./assets/images/Event3poster.webp";
+import TechnicalDebatePoster from "./assets/images/Event4poster.webp";
+import FIFAPoster from "./assets/images/Event5poster.webp";
+import FilmManiaPoster from "./assets/images/Event6poster.webp";
+import BGMIPoster from "./assets/images/Event7poster.webp";
+import SketchZonePoster from "./assets/images/Event8poster.webp";
+import TypeChallengePoster from "./assets/images/Event9poster.webp";
+import NFSPoster from "./assets/images/Event10poster.webp";
+import Acumen2Poster from "./assets/images/Event11poster.webp";
+import AIPalettePoster from "./assets/images/Event12poster.webp";
+import TwistYourBrainPoster from "./assets/images/Event13poster.webp";
+import HopOnPoster from "./assets/images/Event14poster.webp";
+import PromptMasterPoster from "./assets/images/Event15poster.webp";
+import logoimg from "./assets/images/logo.webp";
 import React, { useEffect, useState } from "react";
 import "./App.css"; // Import your CSS
 import useTextTransition from "./useTextTransition";
@@ -26,10 +26,10 @@ import EventDetails from "./EventDetails";
 import Aos from "aos";
 import LoadingScreen from "./LoadingScreen";
 import 'aos/dist/aos.css';
-import sponsor from "./assets/images/sponsor.png"
-import partner1 from "./assets/images/partner1.png"
-import partner2 from "./assets/images/partner2.png"
-
+import sponsor from "./assets/images/sponsor.webp"
+import partner1 from "./assets/images/partner1.webp"
+import partner2 from "./assets/images/partner2.webp"
+import { Analytics } from '@vercel/analytics/react';
 function App() {
   const [showEventDetails, setShowEventDetails] = useState(false);
   const [selectedEvent, setSelectedEvent] = useState(null);
@@ -38,7 +38,8 @@ function App() {
   const [imageLoadDuration, setImageLoadDuration] = useState(0);
   const initialText = "08cyF357 e78f";
   const finalText = "ObCyFest 2023";
-  const duration = 1000; // Transition duration in milliseconds
+
+  const duration = 3000; // Transition duration in milliseconds
 
 
 
@@ -47,8 +48,12 @@ function App() {
 
   const [imagesLoaded, setImagesLoaded] = useState(false);
 
+  
   // Simulate image loading with a delay
+
+
   useEffect(() => {
+    
     const images = [
       Mascot1,
       Mascot2,
@@ -430,8 +435,8 @@ function App() {
           </p>
           
           <p><b>Event Hosts:</b></p>
-            <p>Joe Benny - 9496436031</p>
-            <p>Jaimon James - 9061313287</p>
+            <p>Joe Benny - 7736465972</p>
+            <p>Jaimon James - 7510739988</p>
         </div>
       ),
       poster: FIFAPoster,
@@ -829,10 +834,10 @@ function App() {
             </p>
             <p>
               <b>Game Rules:</b><br/>
-              Four Rounds: Preliminary and Final.<br/>
-              2 members per team, 4 teams per round.<br/>
-              30-block gameboard to the finish.<br/>
-              Categories: Riddles, General Knowledge, Technical Challenges.<br/>
+              3 Rounds: Preliminary and Final.<br/>
+              2 members per team, 8 teams per round.<br/>
+              40-block gameboard to the finish.<br/>
+              Categories: Fun questions only!!.<br/>
               Teamwork is key!
             </p>
             <p>
