@@ -14,7 +14,7 @@ function getCurrentDate() {
   return `${dd} ${mm} ${yyyy}`;
 }
 
-function RegistrationForm({ onClose }) {
+function RegistrationForm({ onClose,googleFormURL }) {
   const [currentDate, setCurrentDate] = useState('');
   const [data, setData] = useState();
   const [username, setUsername] = useState("");
@@ -79,7 +79,7 @@ function RegistrationForm({ onClose }) {
         <h2>Registration Form</h2>
         <br></br>
         {/* Example form fields */}
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeJm6BDvYxb5_JU4_Cjh7lPlHwJ9BqxjZW69VaSYpKo0cRZYw/viewform?embedded=true" width="100%" height="1535" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        <iframe src={googleFormURL + "?embedded=true"} width="100%" height="1535" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
       </div>
     </div>
   );

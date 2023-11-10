@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import RegistrationForm from "./RegistrationForm";
 
-function EventDetails({ onClose, title, description, poster }) {
+function EventDetails({ onClose, title, description, poster,googleFormURL }) {
   // Function to add the 'body-no-scroll' class to the body element
   const [showRegistration, setShowRegistration] = useState(false);
   const disableBodyScroll = () => {
@@ -34,9 +34,13 @@ function EventDetails({ onClose, title, description, poster }) {
 
   return (
     <div className="event-details-overlay" onClick={handleOverlayClick}>
-      {showRegistration ? (
-        <RegistrationForm onClose={() => setShowRegistration(false)} />
-      ) : (
+    {showRegistration ? (
+      <RegistrationForm
+        onClose={() => setShowRegistration(false)}
+        eventTitle={title} // Pass the event title as a prop
+        googleFormURL={googleFormURL} // Pass the Google Form URL as a prop
+      />
+    ) : (
         <div className="event-details">
           <button onClick={onClose} className="close-button">
             &times; {/* This is the 'X' icon */}
@@ -50,6 +54,7 @@ function EventDetails({ onClose, title, description, poster }) {
             </button>
           </div>
         </div>
+        
       )}
     </div>
   );

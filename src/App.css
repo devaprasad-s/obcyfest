@@ -341,6 +341,25 @@
       color: #ccc;
     }
 
+
+
+    .sponsors {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .sponsors h2 {
+      margin: 0;
+      font-size: 40px;
+      color: #fff;
+    }
+
+    .sponsors p {
+      font-size: 30px;
+      color: #ccc;
+    }
+
+
     @font-face {
       font-family: "KellySlab";
       src: url("./assets/fonts/KellySlab-Regular.ttf") format("truetype");
@@ -623,3 +642,72 @@
     .logoimg {
       max-height: 10px;
     }
+
+    .register-button1 {
+      position: relative;
+      padding: 10px 20px;
+      border-radius: 24px;
+      border: 1px solid #116399;
+      font-size: 14px;
+      text-transform: uppercase;
+      font-family: KellySlab;
+      font-weight: 600;
+      letter-spacing: 2px;
+      background: transparent;
+      color: #fff;
+      overflow: hidden;
+      box-shadow: 0 0 0 0 transparent;
+      -webkit-transition: all 0.2s ease-in;
+      -moz-transition: all 0.2s ease-in;
+      transition: all 0.2s ease-in;
+    }
+
+    .register-button1:hover {
+      background: #38caef;
+      box-shadow: 0 0 30px 5px #38caefcb;
+      -webkit-transition: all 0.2s ease-out;
+      -moz-transition: all 0.2s ease-out;
+      transition: all 0.2s ease-out;
+    }
+
+    .register-button1::before {
+      -webkit-animation: sh02 0.5s 0s linear;
+      -moz-animation: sh02 0.5s 0s linear;
+      animation: sh02 0.5s 0s linear;
+    }
+
+    .register-button1::before {
+      content: "";
+      display: block;
+      width: 0px;
+      height: 86%;
+      position: absolute;
+      top: 7%;
+      left: 0%;
+      opacity: 0;
+      background: #fff;
+      box-shadow: 0 0 50px 30px #fff;
+      -webkit-transform: skewX(-20deg);
+      -moz-transform: skewX(-20deg);
+      -ms-transform: skewX(-20deg);
+      -o-transform: skewX(-20deg);
+      transform: skewX(-20deg);
+    }
+
+    .common p{
+      text-align: right;
+      color:#38caef;
+    }
+
+    .sponsorclass img{
+      height:200px;
+      max-width:auto;
+    }
+    .partnerclass img{
+height:400px;
+max-width:ato;
+    }
+    .sponsorclass h2{
+      font-size: 40px;
+    }
+  

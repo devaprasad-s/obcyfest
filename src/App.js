@@ -25,7 +25,9 @@ import Navigation from "./components/Navigation"; // Import the Navigation compo
 import EventDetails from "./EventDetails";
 import Aos from "aos";
 import LoadingScreen from "./LoadingScreen";
-import 'aos/dist/aos.css'
+import 'aos/dist/aos.css';
+import sponsor from "./assets/images/sponsor.png"
+import partners from "./assets/images/partners.png"
 
 function App() {
   const [showEventDetails, setShowEventDetails] = useState(false);
@@ -36,8 +38,6 @@ function App() {
   const initialText = "08cyF357 e78f";
   const finalText = "ObCyFest 2023";
   const duration = imageLoadDuration || 2000; // Transition duration in milliseconds
-
-
 
 
 
@@ -114,6 +114,7 @@ function App() {
   const events = [
     {
       title: "Pattern Printing",
+      googleFormURL:"https://docs.google.com/forms/d/e/1FAIpQLSct2I4xyNy-pgpLGippqFkXd1TIH5qHmqbZiXA-HNUvR3MtjQ/viewform",
       description: (
         <div>
           <p>
@@ -146,7 +147,7 @@ function App() {
           <p>
             <b>Event Details:</b>
           </p>
-          <p>🗓️ Date: <b>07/11/2023</b></p>
+          <p>🗓️ Date: <b>13/11/2023</b></p>
           <p>📍 Venue: <b>Lab 2</b></p>
           <p>
             Immerse yourself in the world of patterns 🎨 and bring your extraordinary vision to life.
@@ -171,6 +172,7 @@ function App() {
     
     {
       title: "Battle of Brains",
+      googleFormURL:"https://docs.google.com/forms/d/e/1FAIpQLSe7dBaNBCfoWy6VFgJbysBcprWCMZwVLkAEUEojAoILNa4XTQ/viewform",
       description: (
         <div>
           <p>
@@ -210,7 +212,7 @@ function App() {
             <b>🧠 BRAIN OUT: Crack the Code Challenge! 🚀</b>
           </p>
           <p>
-            Get ready to immerse yourself in the ultimate code-breaking experience! "BRAIN OUT" is not your typical event; it's a high-stakes journey through puzzles, ciphers, and technical challenges where 12 teams will compete to reveal the hidden codes and bring out the outputs.
+            Get ready to immerse yourself in the ultimate code-breaking experience! "BRAIN OUT" is not your typical event; it's a high-stakes journey through puzzles, ciphers, and technical challenges.
           </p>
           <p>
             🚀<b>TECHPUZZ: Unleash Your Tech Brilliance!💡</b> Join us for an electrifying journey through three thrilling rounds of brain-bending riddles, acronym deciphering, and futuristic predictions. Are you up for the challenge? TechPuzz awaits your genius!
@@ -222,7 +224,7 @@ function App() {
             Jackpot: <b>1000</b>
           </p>
           <p>
-            📅Date: <b>13,14/11/2023</b>
+            📅Date: <b>13/11/2023 - 14/11/2023</b>
           </p>
           <p>
             📍Venue: <b>Lab 1 & Project Lab</b>
@@ -247,6 +249,7 @@ function App() {
     
     {
       title: "Find the Key",
+      googleFormURL: "https://docs.google.com/forms/d/e/1FAIpQLSe4bykOLc5YcKr_jsQvbE3dH0UAX2mRbeqwtVJn977--vYwog/viewform",
       description: (
         <div>
           <p>
@@ -313,6 +316,7 @@ function App() {
     
     {
       title: "Technical Debate",
+      googleFormURL:"https://docs.google.com/forms/d/e/1FAIpQLSdm9O-ruVqVAhRPJXc1Xwt0QeClzUwXFZ4HGTwxQTaB1cuvPw/viewform",
       description: (
         <div>
           <p>
@@ -394,6 +398,7 @@ function App() {
     
     {
       title: "FIFA",
+      googleFormURL:"https://docs.google.com/forms/d/e/1FAIpQLSfazGwV66cIoqaYYFRKGu6H-NR8F3re4vNTOLNIRJZ5Ks2c3Q/viewform",
       description: (
         <div>
           <p>
@@ -433,6 +438,7 @@ function App() {
     
     {
       title: "Film Mania",
+      googleFormURL:"https://docs.google.com/forms/d/e/1FAIpQLSf0TVVfWFdAXD6sHeSR7UC9LLVkkHwd1gL2v_GElcc7tFGV_w/viewform",
       description: (
         <div>
           <p>
@@ -477,6 +483,7 @@ function App() {
     
     {
       title: "BGMI",
+      googleFormURL: "https://docs.google.com/forms/d/e/1FAIpQLSfsU2c8sS4OVCSERl2k-ZxAzVVOynt-3wGQBPQWFEguIgGofA/viewform",
       description: (
         <div>
           <p>
@@ -535,6 +542,7 @@ function App() {
     
     {
       title: "SketchZone",
+      googleFormURL:"https://docs.google.com/forms/d/e/1FAIpQLSc8KOIPadkMWhKRvsGRY6zWbljXAxqmSi2vmElj8V44w8P6tw/viewform",
       description: (
         <div>
           <p>
@@ -590,6 +598,7 @@ function App() {
     
     {
       title: "Type Challenge",
+      googleFormURL: "https://docs.google.com/forms/d/e/1FAIpQLSdNd_Fb5pqmLpZjoGK62LkDDCNir2Ngsknf_DwEHxFsjZNqNg/viewform",
       description: (
         <div>
           <p>
@@ -634,6 +643,7 @@ function App() {
 ,    
 {
   title: "Need for Speed",
+  googleFormURL:"https://docs.google.com/forms/d/e/1FAIpQLSc9PJQQsCx0b5MyzMOvIf5losWEUyNa9cgVTGw4ssddHBO4CQ/viewform",
   description: (
     <div>
       <p>
@@ -669,11 +679,56 @@ function App() {
 ,
       {
         title: "Acumen 2.0",
-        description: "Description for Acumen 2.0.",
+        googleFormURL:"https://docs.google.com/forms/d/e/1FAIpQLSdPW1fqTTLT72lWcYeIZoPuIlbfzsVah58oNULch8Iok15uqQ/viewform",
+        description: (
+          <div>
+            <p>
+              <b>🥅 ACUMEN 2.0 ⚽</b>
+            </p>
+            <p>
+              How about a Pro Evolution Soccer game? It's more exciting than ever! Always keep an eye out for the inspirational figures on the pitch to maximize your attacks. ⚽️⚡️ Get your game on and aim for the top spot in the Tournament 🅰️CUMEN⚡️⚪️ by showcasing your skills. So, what are you waiting for? Charge up your phones, boot up your game, and start having a blast to win some exciting prizes! 🎊🏆
+            </p>
+            <p>
+              <b>Date:</b> <b>Nov 16/11/2023 (online)</b>
+            </p>
+            <p>
+              <b>🥇 :</b> <b>Rs 500/-</b>
+            </p>
+            <p>
+              <b>🥈 :</b> <b>Rs 250/-</b>
+            </p>
+            <p>
+              <b>Registration fee:</b> <b>Rs 50/-</b>
+            </p>
+            <p>
+              🛑<b>Note:</b> Only the semifinalists would be invited to the event taking place at college.
+            </p>
+            <p>
+              <b>Rules:</b>
+            </p>
+            <ul>
+              <li>The matches will be held in a 2vs2</li>
+              <li>The matches will be conducted in online mode from Monday</li>
+              <li>Players are required to be online 10 minutes prior to the match.</li>
+              <li>If no player is shown or is late, will be disqualified and others will be given a BYE (advanced to the next level).</li>
+              <li>Matches will be of default duration followed by penalties if ended in a tie.</li>
+            </ul>
+            <p>
+              <b>For further inquiries, kindly contact the Coordinators</b>:
+            </p>
+            <p>
+              📱<b>Unnikrishnan A: 62823 91002</b>
+            </p>
+            <p>
+              📱<b>Richin P Varghese: 62825 92507</b>
+            </p>
+          </div>
+        ),
         poster: Acumen2Poster,
       },
       {
         title: "AI Palette",
+        googleFormURL:"https://docs.google.com/forms/d/e/1FAIpQLSdI4v6JwPDojAdEHtlQAJRMd52oiOClJOhHKCmOI24YmbkC6Q/viewform",
         description: (
           <div>
             <p>
@@ -711,11 +766,56 @@ function App() {
       },
       {
         title: "Twist Your Brain",
-        description: "Description for Twist Your Brain.",
+        googleFormURL:"https://docs.google.com/forms/d/e/1FAIpQLSerGWFHSsEUrkOeJvupwgJ8f8uNgrIDgt7adNpghbtBoEu1ug/viewform",
+        description: (
+          <div>
+            <p>
+              <b>Twist Your Brain:</b> Where Puzzles and Fun Collide! 🤯🎉
+            </p>
+            <p>
+              Get ready for a mind-bending adventure like no other! "Twist Your Brain" is not your average event; it's a whirlwind of puzzles, riddles, and brain-teasers that'll leave you in awe.
+            </p>
+            <p>
+              🔥 <b>LEVEL 1: Guess the Number</b> 🔥<br/>
+              In the first round, we have 20 brilliant minds competing to tackle the enigmatic world of numbers. With just 7 questions, they must think fast and answer accurately. But there's a twist – the first one to raise their hand gets to answer first! It's a battle of wits, where right answers pave the path to glory, and the top 5 will advance.
+            </p>
+            <p>
+              🌈 <b>LEVEL 2: Guess the Color</b> 🌈<br/>
+              Level up to the challenge in the second round as we delve into the world of colors. With 10 questions, participants will need to swiftly determine the hues that emerge from mixing two given colors. A vivid test of perception, only the top 3 will continue their colorful journey!
+            </p>
+            <p>
+              📷 <b>LEVEL 3: Guess the Pixelated Image</b> 📷<br/>
+              The ultimate showdown! In the final round, participants face pixelated images of animals and famous personalities. With 6 questions and a keen eye, they must decipher the hidden gems within these images. The race to the finish line is on, and the winner will emerge from this thrilling pixelated maze!
+            </p>
+            <p>
+              🏆 <b>Rules for the Brave</b> 🏆<br/>
+              1. Silence is golden during Level 1 – no unnecessary sounds allowed!<br/>
+              2. Quick hands, sharp minds – Level 2 and 3 will test your reflexes.<br/>
+              3. No gadgets, no asking for help – it's an individual battle of wits.<br/>
+              4. Our host's decision is the final word. No arguments allowed, just pure brain-twisting fun!
+            </p>
+            <p>
+              Join us for an electrifying competition that will challenge, engage, and entertain. "Twist Your Brain" is more than just a competition; it's a mental adventure that will leave you buzzing with excitement.
+            </p>
+            <p>
+              Who will emerge as the ultimate thinker, the grandmaster of puzzles, and the conqueror of the brain-twisting challenges? Join us and find out! 🎉🧠
+            </p>
+            <p>
+              📆 <b>Date:</b> <b>17/11/2023</b><br/>
+              <b>📍Venue:</b> Classroom<br/>
+              <b>🥇First:</b> 500<br/>
+              <b>🥈Second:</b> 250<br/>
+              <b>Registration fee:</b> 20<br/>
+              <b>Coordinators:</b> Khulood & Naveen<br/>
+              <b>📞Contact:</b> +91 85901 23899
+            </p>
+          </div>
+        ),
         poster: TwistYourBrainPoster,
       },
       {
         title: "Hop On",
+        googleFormURL:"https://docs.google.com/forms/d/e/1FAIpQLSculZOxy0OCcbyGJLfWWJthU9PsrH39_3JTvQANIX-Eo2Ov6A/viewform",
         description: (
           <div>
             <p>
@@ -758,7 +858,87 @@ function App() {
       },
       {
         title: "Prompt Master",
-        description: "Description for Prompt Master.",
+        googleFormURL:"https://docs.google.com/forms/d/e/1FAIpQLSd6QGCcv1NS4ZnymnQn4hYj7FJJRuSmF1fsAUfAhGOvt5Q3KA/viewform",
+        description: (
+          <div>
+            <p>
+              <b>Prompt Master ✏️:</b> Where Creativity Takes Flight 🚀
+            </p>
+            <p>
+              Unleash your imagination and discover endless writing possibilities with Prompt Master, the ultimate tool for generating captivating prompts. 🧠
+            </p>
+            <p>
+              Welcome to the 🧑‍💻<b>"PROMPT MASTER"</b> competition, where your ability to craft a compelling romp will be put to the test! In this challenge, participants will be tasked with transforming a well-written prompt into a functional website using HTML, CSS.
+            </p>
+            <p>
+              <b>Competition Overview:</b>
+            </p>
+            <ul>
+              <li>
+                Participants will receive a question according to the question write prompt in gpt and translate it into a fully functional website using HTML and CSS.
+              </li>
+              <li>
+                Creativity in design and functionality is highly encouraged.
+              </li>
+            </ul>
+            <p>
+              📝<b>Rules:</b>
+            </p>
+            <ul>
+              <li>
+                All submitted prompts and website code must be original and not copied from existing sources.
+              </li>
+              <li>
+                All content must comply with legal and ethical standards. Offensive, discriminatory, content will result in disqualification.
+              </li>
+              <li>
+                Judges' decisions are final and binding.
+              </li>
+            </ul>
+            <p>
+              <b>Event Details:</b>
+            </p>
+            <ul>
+              <li>
+                🗓️ Date: 18/11/2023
+              </li>
+              <li>
+                📍 Venue: Lab 1
+              </li>
+            </ul>
+            <p>
+              <b>Judges' decisions are final and binding.</b>
+            </p>
+            <p>
+              🏆<b>Grab your prizes!</b>
+            </p>
+            <ul>
+              <li>
+                1st Place: 500/-
+              </li>
+              <li>
+                2nd Place: 250/-
+              </li>
+            </ul>
+            <p>
+              📝<b>Registration:</b>
+            </p>
+            <p>
+              Ready to compete? Secure your spot now! Entry Fee: 20/-
+            </p>
+            <p>
+              For further details, contact event coordinators:
+            </p>
+            <ul>
+              <li>
+                Justin James: 8075512624
+              </li>
+              <li>
+                Nandhana A: 8590058476
+              </li>
+            </ul>
+          </div>
+        ),
         poster: PromptMasterPoster,
       },
   ];
@@ -800,8 +980,11 @@ function App() {
       <section className="mascots">
       <div className="mascotmega"data-aos="fade-right">
       <div className="mascot" >
+        <h2>Points:0</h2>
+          <h2>S1</h2>
+        
           <img src={Mascot1} alt="Mascot 1" />
-          <h2>Raptorix</h2>
+          
           <p className="explanation" >
             <p>
               I am Raptorix, the first year mascot. I love to fly high and hack
@@ -816,8 +999,11 @@ function App() {
         
         <div className="mascotmega" data-aos="fade-right">
         <div className="mascot" >
+          <h2>Points:0</h2>
+          <h2>S3</h2>
+         
           <img src={Mascot2} alt="Mascot 2" />
-          <h2>Metalix</h2>
+          
           <p className="explanation">
             <p>
               {" "}
@@ -832,8 +1018,11 @@ function App() {
         
         <div className="mascotmega" data-aos="fade-left">
         <div className="mascot" >
+          <h2>Points:0</h2>
+          <h2>S5</h2>
+          
           <img src={Mascot3} alt="Mascot 3" />
-          <h2>Blackspix</h2>
+          
           <p className="explanation">
             <p>
               I am Blackspix, the third year mascot. I love to challenge myself
@@ -848,8 +1037,11 @@ function App() {
         
         <div className="mascotmega" data-aos="fade-left">
         <div className="mascot" >
+          <h2>Points:0</h2>
+          <h2>S7</h2>
           <img src={Mascot4} alt="Mascot 4" />
-          <h2>Wyrmix</h2>
+          
+          
           <p className="explanation">
             <p>
               I am Wyrmix, the fourth year mascot. I love to lead with wisdom
@@ -863,6 +1055,9 @@ function App() {
         
       </section>
       <br></br>
+      
+      <br></br>
+      <br></br>
       <section id="events" data-aos="fade-up"></section>
       <br></br>
       <br></br>
@@ -872,17 +1067,33 @@ function App() {
         <h2>Our Events</h2>
         <p>Take a look at our various events for this year's Obcyfest 2k23.</p>
       </section>
-      <section className="event-posters" data-aos="fade-up">
+      <section className="event-posters" >
         {events.map((event, index) => (
-          <div className="poster" key={index}>
+          <div className="poster" key={index} data-aos="fade-up">
             <img
               src={event.poster}
               alt={`Event Poster ${index}`}
               onClick={() => openEventDetails(event)}
             />
-            <h3>{event.title}</h3>
+            <div className="register-button1" onClick={() => openEventDetails(event)}><h3 >{event.title}</h3></div>
           </div>
         ))}
+      </section>
+
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <section className="sponsors" data-aos="fade-up">
+        <h2>Thank You!</h2>
+        <p>A huge thank you for making this event possible. <br></br>We extend our heartfelt gratitude to our sponsor,TechKnowFactory<br></br> and partners,IEDC and IIC <br></br>for their invaluable support and contributions.</p>
+
+        
+          <div className="sponsorclass"><h2>Our Sponsor</h2><br></br><br></br><img src={sponsor} alt="Sponsor" /></div>
+          <br></br>
+          <br></br>
+          <div className="partnerclass"><h2>Our Partners</h2><img src={partners} alt="Partners" /></div>
+  
       </section>
 
       {showEventDetails && (
@@ -891,8 +1102,11 @@ function App() {
           title={selectedEvent.title}
           description={selectedEvent.description}
           poster={selectedEvent.poster} // Pass the poster image
+          googleFormURL={selectedEvent.googleFormURL}
         />
       )}
+
+
 <footer>&copy; 2023 Obcydians CCET</footer>
 </>
 ) : (
