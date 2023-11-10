@@ -10,7 +10,7 @@
 
     /* Header styles */
     header {
-      padding: 20px;
+      padding: 15px;
       text-align: center;
       font-family: KellySlab, sans-serif;
     }
@@ -246,64 +246,7 @@
     /* Add this CSS to your App.css file */
 
     /* Styles for screens with a maximum width of 768px (typical for mobile phones) */
-    @media (max-width: 768px) {
-      .mascots {
-        flex-direction: column; /* Stack mascots vertically */
-        align-items: center; /* Center mascots horizontally */
-        height: auto; /* Remove fixed height to allow content to adjust */
-      }
 
-      .mascot {
-        margin: 10px 0; /* Add spacing between mascots */
-      }
-
-      .mascot:hover {
-        transform: none; /* Remove hover effect on mobile */
-      }
-
-      .explanation {
-        display: block; /* Always show explanations on mobile */
-      }
-      .event-posters {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        gap: 30px;
-        padding: 20px;
-      }
-      .poster {
-        width:100%; /* 30% width with a 20px gap between posters */
-        border: 2px solid #616161;
-        max-width: 100%;
-        height: auto;
-        cursor: pointer;
-        margin-bottom: 10px;
-        background-color: #000;
-      }
-      .event-details {
-      background: #000;
-      padding: 20px;
-      max-width: 90%;
-      text-align: center;
-      display: flex;
-      flex-direction: column; /* Arrange elements vertically */
-      align-items: center; /* Center elements horizontally */
-      border: 3px solid #616161; /* Add a border for the frame effect */
-      border-radius: 10px; /* Add rounded corners for the frame */
-      overflow-y: auto; /* Add scroll property to enable scrolling within the container */
-      max-height: 90%;
-      }
-      .obcy-head img {
-        height: auto;
-        width: auto;
-        max-width: 100%; /* Set the max-width property */
-        margin-left: 5%;
-        margin-bottom: -20%;
-        /* Adjust the margin-top as needed */
-      }
-      
-
-    }
 
     .mascot-introduction {
       text-align: center;
@@ -703,11 +646,82 @@
       height:200px;
       max-width:auto;
     }
-    .partnerclass img{
-height:400px;
-max-width:ato;
+    .partner-logo1 img{
+      height:400px;
+      max-width: auto;
     }
-    .sponsorclass h2{
-      font-size: 40px;
+    .partner-logo2 img{
+      height:230px;
+      max-width: auto;
     }
+    
   
+    @media (max-width: 768px) {
+      .mascots {
+        flex-direction: column; /* Stack mascots vertically */
+        align-items: center; /* Center mascots horizontally */
+        height: auto; /* Remove fixed height to allow content to adjust */
+        overflow-x: hidden;
+      }
+
+      .mascot {
+        margin: 10px 0; /* Add spacing between mascots */
+      }
+
+      .mascot:hover {
+        transform: none; /* Remove hover effect on mobile */
+      }
+
+      .explanation {
+        display: block; /* Always show explanations on mobile */
+      }
+      .event-posters {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 30px;
+        padding: 20px;
+      }
+      .poster {
+        width:100%; /* 30% width with a 20px gap between posters */
+        border: 2px solid #616161;
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+        margin-bottom: 10px;
+        background-color: #000;
+      }
+      .event-details {
+      background: #000;
+      padding: 20px;
+      max-width: 90%;
+      text-align: center;
+      display: flex;
+      flex-direction: column; /* Arrange elements vertically */
+      align-items: center; /* Center elements horizontally */
+      border: 3px solid #616161; /* Add a border for the frame effect */
+      border-radius: 10px; /* Add rounded corners for the frame */
+      overflow-y: auto; /* Add scroll property to enable scrolling within the container */
+      max-height: 90%;
+      }
+      .obcy-head img {
+        height: auto;
+        width: auto;
+        max-width: 100%; /* Set the max-width property */
+        margin-left: 5%;
+        margin-bottom: -20%;
+        /* Adjust the margin-top as needed */
+      }
+      .partner-logo1 img{
+        height:300px;
+        max-width: auto;
+      }
+      .partner-logo2 img{
+        height:160px;
+        max-width: auto;
+        margin-left: 40px;
+        
+      }
+      
+
+    }

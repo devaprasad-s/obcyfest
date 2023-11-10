@@ -27,7 +27,8 @@ import Aos from "aos";
 import LoadingScreen from "./LoadingScreen";
 import 'aos/dist/aos.css';
 import sponsor from "./assets/images/sponsor.png"
-import partners from "./assets/images/partners.png"
+import partner1 from "./assets/images/partner1.png"
+import partner2 from "./assets/images/partner2.png"
 
 function App() {
   const [showEventDetails, setShowEventDetails] = useState(false);
@@ -37,7 +38,7 @@ function App() {
   const [imageLoadDuration, setImageLoadDuration] = useState(0);
   const initialText = "08cyF357 e78f";
   const finalText = "ObCyFest 2023";
-  const duration = imageLoadDuration || 2000; // Transition duration in milliseconds
+  const duration = 1000; // Transition duration in milliseconds
 
 
 
@@ -1092,7 +1093,12 @@ function App() {
           <div className="sponsorclass"><h2>Our Sponsor</h2><br></br><br></br><img src={sponsor} alt="Sponsor" /></div>
           <br></br>
           <br></br>
-          <div className="partnerclass"><h2>Our Partners</h2><img src={partners} alt="Partners" /></div>
+          <div className="partnerclass"><h2>Our Partners</h2><div className="partner-logo1">
+      <img src={partner1} alt="Partner 1" />
+    </div>
+    <div className="partner-logo2">
+      <img src={partner2} alt="Partner 2" />
+    </div></div>
   
       </section>
 
