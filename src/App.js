@@ -1095,13 +1095,13 @@ function App() {
         <p>A huge thank you for making this event possible. <br></br>We extend our heartfelt gratitude to our sponsor,TechKnowFactory<br></br> and partners,IEDC and IIC <br></br>for their invaluable support and contributions.</p>
 
         
-          <div className="sponsorclass"><h2>Our Sponsor</h2><br></br><br></br><img src={sponsor} alt="Sponsor" /></div>
+          <div className="sponsorclass" data-aos="fade-up"><h2>Our Sponsor</h2><br></br><br></br><img src={sponsor} alt="Sponsor" /></div>
           <br></br>
           <br></br>
-          <div className="partnerclass"><h2>Our Partners</h2><div className="partner-logo1">
+          <div className="partnerclass" data-aos="fade-up" ><h2>Our Partners</h2><div className="partner-logo1" data-aos="fade-up">
       <img src={partner1} alt="Partner 1" />
     </div>
-    <div className="partner-logo2">
+    <div className="partner-logo2" data-aos="fade-up">
       <img src={partner2} alt="Partner 2" />
     </div></div>
   
