@@ -824,14 +824,14 @@ function App() {
         googleFormURL:"https://docs.google.com/forms/d/e/1FAIpQLSculZOxy0OCcbyGJLfWWJthU9PsrH39_3JTvQANIX-Eo2Ov6A/viewform",
         description: (
           <div>
-  <h1>HOP ON</h1>
+  <b>HOP ON</b>
   <p>Get ready for the Ultimate Team Challenge! 🎮</p>
 
-  <h2>Event Details:</h2>
+  <b>Event Details:</b>
   <p>Date: 18-11-2023</p>
   <p>Location: Outdoors</p>
 
-  <h2>Game Rules:</h2>
+  <b>Game Rules:</b>
   <p>Two Rounds: Preliminary and Final.</p>
   <p>16 teams can partake in the Preliminary round.</p>
   <p>2 members per team, 8 teams in the final round.</p>
@@ -839,11 +839,11 @@ function App() {
   <p>Categories: Riddles and fun type of questions.</p>
   <p>Teamwork is key!</p>
 
-  <h2>For inquiries and registration:</h2>
+  <b>For inquiries and registration:</b>
   <p>📞 Ardra: +91 62383 93086</p>
   <p>📞 Aadith: +91 94952 68368</p>
 
-  <h2>Gameplay:</h2>
+  <b>Gameplay:</b>
   <p>Team members who roll the dice should answer the questions.</p>
   <p>Dice roll decides the turn order.</p>
   <p>60-seconds time limit to answer the question.</p>
