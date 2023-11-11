@@ -774,91 +774,34 @@ function App() {
         title: "Twist Your Brain",
         googleFormURL:"https://docs.google.com/forms/d/e/1FAIpQLSerGWFHSsEUrkOeJvupwgJ8f8uNgrIDgt7adNpghbtBoEu1ug/viewform",
         description: (
-          <div>
-            <p>
-              <b>Twist Your Brain:</b> Where Puzzles and Fun Collide! 🤯🎉
-            </p>
-            <p>
-              Get ready for a mind-bending adventure like no other! "Twist Your Brain" is not your average event; it's a whirlwind of puzzles, riddles, and brain-teasers that'll leave you in awe.
-            </p>
-            <p>
-              🔥 <b>LEVEL 1: Guess the Number</b> 🔥<br/>
-              In the first round, we have 20 brilliant minds competing to tackle the enigmatic world of numbers. With just 7 questions, they must think fast and answer accurately. But there's a twist – the first one to raise their hand gets to answer first! It's a battle of wits, where right answers pave the path to glory, and the top 5 will advance.
-            </p>
-            <p>
-              🌈 <b>LEVEL 2: Guess the Color</b> 🌈<br/>
-              Level up to the challenge in the second round as we delve into the world of colors. With 10 questions, participants will need to swiftly determine the hues that emerge from mixing two given colors. A vivid test of perception, only the top 3 will continue their colorful journey!
-            </p>
-            <p>
-              📷 <b>LEVEL 3: Guess the Pixelated Image</b> 📷<br/>
-              The ultimate showdown! In the final round, participants face pixelated images of animals and famous personalities. With 6 questions and a keen eye, they must decipher the hidden gems within these images. The race to the finish line is on, and the winner will emerge from this thrilling pixelated maze!
-            </p>
-            <p>
-              🏆 <b>Rules for the Brave</b> 🏆<br/>
-              1. Silence is golden during Level 1 – no unnecessary sounds allowed!<br/>
-              2. Quick hands, sharp minds – Level 2 and 3 will test your reflexes.<br/>
-              3. No gadgets, no asking for help – it's an individual battle of wits.<br/>
-              4. Our host's decision is the final word. No arguments allowed, just pure brain-twisting fun!
-            </p>
-            <p>
-              Join us for an electrifying competition that will challenge, engage, and entertain. "Twist Your Brain" is more than just a competition; it's a mental adventure that will leave you buzzing with excitement.
-            </p>
-            <p>
-              Who will emerge as the ultimate thinker, the grandmaster of puzzles, and the conqueror of the brain-twisting challenges? Join us and find out! 🎉🧠
-            </p>
-            <p>
-              📆 <b>Date:</b> <b>17/11/2023</b><br/>
-              <b>📍Venue:</b> Classroom<br/>
-              <b>🥇First:</b> 500<br/>
-              <b>🥈Second:</b> 250<br/>
-              <b>Registration fee:</b> 20<br/>
-              <b>Coordinators:</b> Khulood & Naveen<br/>
-              <b>📞Contact:</b> +91 85901 23899
-            </p>
-          </div>
-        ),
-        poster: TwistYourBrainPoster,
-      },
-      {
-        title: "Hop On",
-        googleFormURL:"https://docs.google.com/forms/d/e/1FAIpQLSculZOxy0OCcbyGJLfWWJthU9PsrH39_3JTvQANIX-Eo2Ov6A/viewform",
-        description: (
-          <div>
-            <p>
-              <b>HOP ON</b><br/>
-              Get ready for the Ultimate Team Challenge! 🎮
-            </p>
-            <p>
-              <b>Event Details:</b><br/>Date: 18-11-2023<br/>
-              Location: Outdoors
-            </p>
-            <p>
-              <b>Game Rules:</b><br/>
-              3 Rounds: Preliminary and Final.<br/>
-              2 members per team, 8 teams per round.<br/>
-              40-block gameboard to the finish.<br/>
-              Categories: Fun questions only!!.<br/>
-              Teamwork is key!
-            </p>
-            <p>
-              <b>Prizes:</b><br/>
-              First Prize: ₹500<br/>
-              Second Prize: ₹250
-            </p>
-            <p>
-              <b>For inquiries and registration:</b><br/>
-              📞 Ardra: +91 62383 93086<br/>
-              📞 Aadith: +91 94952 68368
-            </p>
-            <p>
-              <b>Gameplay:</b><br/>
-              One player answers, one rolls the dice.<br/>
-              Dice roll decides turn order.<br/>
-              60-sec riddles, 90-sec GK, 120-sec Technical.<br/>
-              Incorrect answers move back, correct answers move forward.<br/>
-              First to finish or go farthest wins.
-            </p>
-          </div>
+<div>
+  <h1>HOP ON</h1>
+  <p>Get ready for the Ultimate Team Challenge! 🎮</p>
+
+  <h2>Event Details:</h2>
+  <p>Date: 18-11-2023</p>
+  <p>Location: Outdoors</p>
+
+  <h2>Game Rules:</h2>
+  <p>Two Rounds: Preliminary and Final.</p>
+  <p>16 teams can partake in the Preliminary round.</p>
+  <p>2 members per team, 8 teams in the final round.</p>
+  <p>40-block gameboard to the finish.</p>
+  <p>Categories: Riddles and fun type of questions.</p>
+  <p>Teamwork is key!</p>
+
+  <h2>For inquiries and registration:</h2>
+  <p>📞 Ardra: +91 62383 93086</p>
+  <p>📞 Aadith: +91 94952 68368</p>
+
+  <h2>Gameplay:</h2>
+  <p>Team members who roll the dice should answer the questions.</p>
+  <p>Dice roll decides the turn order.</p>
+  <p>60-seconds time limit to answer the question.</p>
+  <p>Incorrect answers move back, correct answers move forward.</p>
+  <p>First to finish or go farthest wins.</p>
+</div>
+
         ),
         poster: HopOnPoster,
       },
