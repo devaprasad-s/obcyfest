@@ -58,7 +58,7 @@
       background-color: #000000;
       display: flex;
       align-items: center;
-      
+      justify-content: space-between; 
       height: 70px;
       
       position: fixed; /* Make the navigation bar fixed */
@@ -67,6 +67,20 @@
       z-index: 999;
       left: 0; /* Ensure it's above other elements */
       
+    }
+    .score-card {
+
+      display: flex;
+      align-items: center;
+    }
+    
+    .score {
+      background-color: #ccc; 
+      color: #000000;
+      font-size: 18px; 
+      padding: 10px 20px; 
+      margin-right: 20px; 
+      border-radius: 5px;
     }
 
     /* Rest of your CSS styles */
@@ -654,6 +668,12 @@
       height:230px;
       max-width: auto;
     }
+
+
+    .pointstable{
+      text-align: right;
+      display: flex;
+    }
     
   
     @media (max-width: 768px) {
@@ -722,6 +742,18 @@
         margin-left: 40px;
         
       }
+      .score-card {
+        flex-direction: row; /* Stack scores vertically in mobile view */
+        text-align: center; /* Center align scores in mobile view */
+      }
+    
+      .score {
+        margin: 5px 0; /* Add some margin between scores in mobile view */
+        background-color: transparent; 
+        color: #fff;
+      }
       
 
     }
+
+    

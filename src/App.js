@@ -40,6 +40,7 @@ function App() {
   const finalText = "ObCyFest 2023";
 
   const duration = 3000; // Transition duration in milliseconds
+  const scores=["0","0","5","30"]
 
 
 
@@ -949,6 +950,7 @@ function App() {
   const closeEventDetails = () => {
     setShowEventDetails(false);
   };
+  
 
   return (
     
@@ -958,8 +960,9 @@ function App() {
         (
         <>
       <header >
+        <Analytics/>
       
-        <Navigation /> {/* Include the Navigation component here */}
+        <Navigation scores={scores}/> {/* Include the Navigation component here */}
         <section className="obcy-head" data-aos="fade-up" style={{ marginTop: '-5%',marginBottom: '-12%' }}>
         <h1> <img src={logoimg} alt={text} /></h1>
         </section>
@@ -978,7 +981,7 @@ function App() {
       <section className="mascots">
       <div className="mascotmega"data-aos="fade-right">
       <div className="mascot" >
-        <h2>Points:0</h2>
+        <h2>Points:{scores[0]}</h2>
           <h2>S1</h2>
         
           <img src={Mascot1} alt="Mascot 1" />
@@ -997,7 +1000,7 @@ function App() {
         
         <div className="mascotmega" data-aos="fade-right">
         <div className="mascot" >
-          <h2>Points:0</h2>
+          <h2>Points:{scores[1]}</h2>
           <h2>S3</h2>
          
           <img src={Mascot2} alt="Mascot 2" />
@@ -1016,7 +1019,7 @@ function App() {
         
         <div className="mascotmega" data-aos="fade-left">
         <div className="mascot" >
-          <h2>Points:0</h2>
+          <h2>Points:{scores[2]}</h2>
           <h2>S5</h2>
           
           <img src={Mascot3} alt="Mascot 3" />
@@ -1035,7 +1038,7 @@ function App() {
         
         <div className="mascotmega" data-aos="fade-left">
         <div className="mascot" >
-          <h2>Points:0</h2>
+          <h2>Points:{scores[3]}</h2>
           <h2>S7</h2>
           <img src={Mascot4} alt="Mascot 4" />
           
