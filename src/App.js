@@ -40,7 +40,7 @@ function App() {
   const finalText = "ObCyFest 2023";
 
   const duration = 3000; // Transition duration in milliseconds
-  const scores=["05","35","85","190"]
+  const scores=["50","95","145","270"]
 
 
 
