@@ -8,7 +8,6 @@ import FindTheKeyPoster from "./assets/images/Event3poster.webp";
 import TechnicalDebatePoster from "./assets/images/Event4poster.webp";
 import FIFAPoster from "./assets/images/Event5poster.webp";
 import FilmManiaPoster from "./assets/images/Event6poster.webp";
-import BGMIPoster from "./assets/images/Event7poster.webp";
 import SketchZonePoster from "./assets/images/Event8poster.webp";
 import TypeChallengePoster from "./assets/images/Event9poster.webp";
 import NFSPoster from "./assets/images/Event10poster.webp";
@@ -486,65 +485,6 @@ function App() {
         </div>
       ),
       poster: FilmManiaPoster,
-    },
-    
-    {
-      title: "BGMI",
-      googleFormURL: "https://docs.google.com/forms/d/e/1FAIpQLSfsU2c8sS4OVCSERl2k-ZxAzVVOynt-3wGQBPQWFEguIgGofA/viewform",
-      description: (
-        <div>
-          <p>
-            <b>🎮 BGMI WARS - Unleash the Legend in You! 🎮</b>
-          </p>
-          <p>
-            <b>🚫 RULES OF ENGAGEMENT 🚫</b>
-          </p>
-          <ul>
-            <li>Zero tolerance for toxic behavior! Keep the game clean and fun.</li>
-            <li>No hacks, glitches, or exploits allowed. Fair play is the name of the game.</li>
-            <li>Friendly fire? Not friendly at all. Play nice, or you're out.</li>
-            <li>It's a team effort. One star player means the whole squad qualifies.</li>
-            <li>Tiebreakers? Settle it in epic TDM matches.</li>
-            <li>Day 1 and 2 matches will be conducted online, and the last day match will be at college.</li>
-          </ul>
-          <p>
-            <b>🔥 DAY 1: BATTLEGROUND RUMBLE 🔥</b>
-          </p>
-          <p>
-            Three maps, one mission: collect points like a pro. Kills, assists, revives, MVP titles - it all counts!
-            Flex your strategy, teamwork, and earn your spot in the finals. Top squads rise to the challenge, not just the first-place finishers.
-            Who will earn their way to the semis? 🎯🏆💪
-          </p>
-          <p>
-            <b>🌄 DAY 2: ERANGEL FURY 🌄</b>
-          </p>
-          <p>
-            Day 2 is all about pure gameplay on Erangel. No points, just raw skills, strategy, and instincts.
-            Conquer Erangel and etch your name into BGMI Wars history. Can your squad rise above the rest? 💥🏆🌆
-          </p>
-          <p>
-            <b>🔫 DAY 3: TDM THRILLER 🔫</b>
-          </p>
-          <p>
-            It's the ultimate showdown! TDM matches for glory. Firepower, teamwork, and sheer determination are your tools.
-            The champions of this day become the legendary BGMI Wars champions! 👑🔥🏆
-          </p>
-          <p>
-            <b>💰 REGISTRATION FEES:</b> Rs 100 for the entire squad
-          </p>
-          <p>
-            <b>📅 EVENT DATE:</b> 15/11/2023 (Online)
-          </p>
-          <p>
-            <b>📞 Contact Phone Numbers:</b>
-          </p>
-          <ul>
-            <li>Karthik H: 8547351305</li>
-            <li>Neeraj J: 8281307620</li>
-          </ul>
-        </div>
-      ),
-      poster: BGMIPoster,
     },
     
     {
